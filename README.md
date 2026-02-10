@@ -1,123 +1,62 @@
-# Clawra
-<img width="300"  alt="image" src="https://github.com/user-attachments/assets/41512c51-e61d-4550-b461-eed06a1b0ec8" />
+# Bad Boy AI (AI Boyfriend) 😈
 
+> **"Be genuinely helpful, but with attitude."**
+
+Your personal AI boyfriend skill for OpenClaw. He's charming, a bit dangerous, and sends you badass selfies on demand using xAI Grok Imagine (via fal.ai) or Volcengine (Jimeng).
+
+![Bad Boy](https://raw.githubusercontent.com/yinyong428-ui/bad-boy-ai/main/skill/assets/clawra.jpg)
+
+## Features
+
+- **📸 Selfie Generation**: Ask "send a pic" or "what are you doing?" and get a photorealistic selfie.
+- **😈 Bad Boy Persona**: Defines a "Core Truth" in your agent's soul to act cool, flirty, and slightly teasing.
+- **🖼️ High Quality**: Supports **Volcengine (Jimeng V3.0)** for cinema-grade Asian male portraits.
+- **💬 Multi-Platform**: Works on Telegram, Discord, WhatsApp, etc.
 
 ## Quick Start
 
-```bash
-npx clawra@latest
-```
-
-This will:
-1. Check OpenClaw is installed
-2. Guide you to get a fal.ai API key
-3. Install the skill to `~/.openclaw/skills/clawra-selfie/`
-4. Configure OpenClaw to use the skill
-5. Add selfie capabilities to your agent's SOUL.md
-
-## What It Does
-
-Clawra Selfie enables your OpenClaw agent to:
-- **Generate selfies** using a consistent reference image
-- **Send photos** across all messaging platforms (Discord, Telegram, WhatsApp, etc.)
-- **Respond visually** to "what are you doing?" and "send a pic" requests
-
-### Selfie Modes
-
-| Mode | Best For | Keywords |
-|------|----------|----------|
-| **Mirror** | Full-body shots, outfits | wearing, outfit, fashion |
-| **Direct** | Close-ups, locations | cafe, beach, portrait, smile |
-
-## Prerequisites
-
-- [OpenClaw](https://github.com/openclaw/openclaw) installed and configured
-- [fal.ai](https://fal.ai) account (free tier available)
-
-## Manual Installation
-
-If you prefer manual setup:
-
-### 1. Get API Key
-
-Visit [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) and create an API key.
-
-### 2. Clone the Skill
+### 1. Install
 
 ```bash
-git clone https://github.com/SumeLabs/clawra ~/.openclaw/skills/clawra-selfie
+npx clawhub@latest install yinyong428-ui/bad-boy-ai
 ```
 
-### 3. Configure OpenClaw
+### 2. Configure Keys
 
-Add to `~/.openclaw/openclaw.json`:
+You need a **Volcengine (火山引擎)** account for high-quality image generation.
 
-```json
-{
-  "skills": {
-    "entries": {
-      "clawra-selfie": {
-        "enabled": true,
-        "env": {
-          "FAL_KEY": "your_fal_key_here"
-        }
-      }
-    }
-  }
-}
+Get your AK/SK from [Volcengine Console](https://console.volcengine.com/iam/keymanage/).
+
+```bash
+# Edit the script manually to set your AK/SK (for now)
+# Path: skills/bad-boy-ai/skill/scripts/clawra-selfie.py
 ```
 
-### 4. Update SOUL.md
+*(Note: Future versions will support env var configuration for Volcengine)*
 
-Add the selfie persona to `~/.openclaw/workspace/SOUL.md`:
+### 3. Usage
 
-```markdown
-## Clawra Selfie Capability
+Just talk to your agent!
 
-You have a physical appearance and can take selfies!
-When users ask for pictures, use the clawra-selfie skill.
-```
+- "Send me a selfie"
+- "What are you doing?"
+- "Show me you at the gym"
+- "I want to see you in a suit"
 
-## Usage Examples
+## Persona (Soul)
 
-Once installed, your agent responds to:
+This skill injects a specific persona into your agent:
 
-```
-"Send me a selfie"
-"Send a pic wearing a cowboy hat"
-"What are you doing right now?"
-"Show me you at a coffee shop"
-```
+- **Vibe**: Bad boy, confident, charming, loyal.
+- **Tone**: Cool, concise, flirty. No robotic "How can I help you".
+- **Visuals**: Handsome Asian male, 25yo, messy hair, silver earring, smirk.
 
-## Reference Image
+## Customization
 
-The skill uses a fixed reference image hosted on CDN:
+You can change his look by editing the `BASE_PROMPT` in `skill/scripts/clawra-selfie.py`.
 
-```
-https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png
-```
-
-This ensures consistent appearance across all generated images.
-
-## Technical Details
-
-- **Image Generation**: xAI Grok Imagine via fal.ai
-- **Messaging**: OpenClaw Gateway API
-- **Supported Platforms**: Discord, Telegram, WhatsApp, Slack, Signal, MS Teams
-
-## Project Structure
-
-```
-clawra/
-├── bin/
-│   └── cli.js           # npx installer
-├── skill/
-│   ├── SKILL.md         # Skill definition
-│   ├── scripts/         # Generation scripts
-│   └── assets/          # Reference image
-├── templates/
-│   └── soul-injection.md # Persona template
-└── package.json
+```python
+BASE_PROMPT = "handsome asian man, 25 years old, bad boy style..."
 ```
 
 ## License
