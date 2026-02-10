@@ -13,7 +13,7 @@ Edit a fixed reference image of a handsome "bad boy" character using xAI's Grok 
 The skill uses a fixed reference image hosted on your GitHub:
 
 ```
-https://raw.githubusercontent.com/yinyong428-ui/bad-boy-ai/main/skill/assets/clawra.jpg
+https://raw.githubusercontent.com/yinyong428/bad-boy-ai/main/skill/assets/clawra.jpg
 ```
 
 ## When to Use
@@ -90,7 +90,7 @@ a close-up selfie taken by himself at a bar, direct eye contact with the camera,
 Use the fal.ai API to edit the reference image:
 
 ```bash
-REFERENCE_IMAGE="https://raw.githubusercontent.com/yinyong428-ui/bad-boy-ai/main/skill/assets/clawra.jpg"
+REFERENCE_IMAGE="https://raw.githubusercontent.com/yinyong428/bad-boy-ai/main/skill/assets/clawra.jpg"
 
 # Mode 1: Mirror Selfie
 PROMPT="make a pic of this handsome bad boy, but <USER_CONTEXT>. he is taking a mirror selfie, badass vibe, cool, confident, masculine"
@@ -123,7 +123,7 @@ if [ -z "$FAL_KEY" ]; then
 fi
 
 # Fixed reference image (YOUR BAD BOY IMAGE)
-REFERENCE_IMAGE="https://raw.githubusercontent.com/yinyong428-ui/bad-boy-ai/main/skill/assets/clawra.jpg"
+REFERENCE_IMAGE="https://raw.githubusercontent.com/yinyong428/bad-boy-ai/main/skill/assets/clawra.jpg"
 
 USER_CONTEXT="$1"
 CHANNEL="$2"

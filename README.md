@@ -4,7 +4,7 @@
 
 Your personal AI boyfriend skill for OpenClaw. He's charming, a bit dangerous, and sends you badass selfies on demand using xAI Grok Imagine (via fal.ai) or Volcengine (Jimeng).
 
-![Bad Boy](https://raw.githubusercontent.com/yinyong428-ui/bad-boy-ai/main/skill/assets/clawra.jpg)
+![Bad Boy](https://raw.githubusercontent.com/yinyong428/bad-boy-ai/main/skill/assets/clawra.jpg)
 
 ## Features
 
@@ -18,7 +18,7 @@ Your personal AI boyfriend skill for OpenClaw. He's charming, a bit dangerous, a
 ### 1. Install
 
 ```bash
-npx clawhub@latest install yinyong428-ui/bad-boy-ai
+npx clawhub@latest install yinyong428/bad-boy-ai
 ```
 
 ### 2. Configure Keys
